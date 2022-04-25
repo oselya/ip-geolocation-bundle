@@ -1,0 +1,21 @@
+services:
+  Oselya\IpGeolocationBundle\Command\IpGeolocationCommand:
+    public: false
+    tags:
+      - { name: 'console.command' }
+    arguments:
+      $provider: '@Oselya\IpGeolocationBundle\GeoIpProvider\GeoIpProviderInterface'
+
+  Oselya\IpGeolocationBundle\GeoIpProvider\GeoIpProviderInterface:
+    class: Oselya\IpGeolocationBundle\GeoIpProvider\CascadeProvider
+    arguments:
+      $cache: '@oselya.ip_geolocation.cache'
+
+  oselya.ip_geolocation.cache:
+    class: Symfony\Contracts\Cache\CacheInterface
+    factory: ['Oselya\IpGeolocationBundle\Cache\Factory', 'create']
+    arguments: ['%oselya.ip_geolocation.cache_ttl%']
+
+  oselya.ip_geolocation.http_client:
+    class: GuzzleHttp\ClientInterface
+    factory: ['Oselya\IpGeolocationBundle\GuzzleHttp\Factory', 'createClient']

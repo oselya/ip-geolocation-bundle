@@ -1,33 +1,3 @@
-Symfony IP geolocation bundle
-=============================
-
-Before we get started, there is a small amount of configuration needed
-
-```yml
-# app/config/ip_geolocation.yaml
-
-ip_geolocation:
-  cache_ttl: -1
-  maxmind:
-    city_path: 'GeoLite2-City.mmdb'
-  ip_api_com:
-    access_key: 'qwerty'
-```
-
-Cli command
-
-```shell
-$ bin/console app:ip:location 92.253.204.162
-+----------------+-----------+---------+-----------------+-----------------+
-| IP             | Continent | Country | Latitude        | Longitude       |
-+----------------+-----------+---------+-----------------+-----------------+
-| 92.253.204.162 | EU        | UA      | 48.342449188232 | 24.575370788574 |
-+----------------+-----------+---------+-----------------+-----------------+
-```
-
-Service
-
-```php
 <?php
 
 declare(strict_types=1);
@@ -78,4 +48,3 @@ class IpGeolocationCommand extends Command
         return Command::SUCCESS;
     }
 }
-```
