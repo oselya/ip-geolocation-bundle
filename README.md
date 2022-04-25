@@ -1,5 +1,6 @@
 Symfony IP geolocation bundle
 =============================
+[![License][license-image]][license-link]  
 
 Before we get started, there is a small amount of configuration needed
 
@@ -79,3 +80,6 @@ class IpGeolocationCommand extends Command
     }
 }
 ```
+
+[license-link]: https://github.com/oselya/ip-geolocation-bundle/blob/main/LICENSE
+[license-image]: https://img.shields.io/dub/l/vibe-d.svg
