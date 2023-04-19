@@ -2,6 +2,11 @@ Symfony IP geolocation bundle
 =============================
 [![License][license-image]][license-link] ![workflow](https://github.com/oselya/ip-geolocation-bundle/actions/workflows/php.yml/badge.svg)
 
+Install
+
+```shell
+composer req oselya/ip-geolocation-bundle
+```
 
 Before we get started, there is a small amount of configuration needed
 
