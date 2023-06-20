@@ -17,7 +17,7 @@ class GeoIpProviderPass implements CompilerPassInterface
 {
     private const PROVER_TAG = 'oselya.ip_geolocation_provider';
 
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         $cascadeProvider = $container->getDefinition(GeoIpProviderInterface::class);
 
