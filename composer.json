@@ -19,7 +19,7 @@
         "optimize-autoloader": true
     },
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.1",
         "geoip2/geoip2": "^2.12",
         "guzzlehttp/guzzle": "^7.4",
         "symfony/cache": "^6.0|^7.0",
