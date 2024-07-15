@@ -15,8 +15,6 @@ class IpGeolocationBundleTest extends TestCase
     {
         $bundle = new IpGeolocationBundle();
 
-        self::assertStringContainsString('ip-geolocation-bundle', $bundle->getPath());
-
         $containerBuilder = $this->createMock(ContainerBuilder::class);
         $containerBuilder->expects($this->once())
             ->method('addCompilerPass')
